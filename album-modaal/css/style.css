@@ -1,0 +1,125 @@
+body {
+  font-family: Roboto;
+  position: relative;
+  margin: 0;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 1em;
+  padding: 1.2em;
+  justify-items: center;
+}
+
+.wrapper .modaalContent {
+  display: none;
+}
+
+h1 {
+  grid-column: 1/-1;
+}
+
+article {
+  break-before: column;
+  column-count: 1;
+  text-decoration: none;
+}
+
+li {
+  text-align: center;
+}
+
+img {
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  border-radius: 1em;
+}
+
+img.modaal-knop {
+  max-width: 350px;
+  max-height: 350px;
+  transition: transform .3s ease-out, box-shadow .4s ease-out;
+}
+
+img.modaal-knop:hover {
+  transform: scale(1.05);
+  box-shadow: .5em .5em 2em rgba(0, 0, 0, 0.7);
+}
+
+.modaal-knop {
+  cursor: pointer;
+}
+
+.modaalContent {
+  break-before: column;
+  column-count: 2;
+}
+
+.modaal-knop {
+  width: 350px;
+  height: 350px;
+}
+.cd-size {
+  width: 350px;
+  height: 350px;
+}
+
+.album {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 80vw;
+  grid-gap: 1em;
+}
+
+.grid img {
+  max-width: 100%;
+}
+
+.modaal-achtergrond{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.modaal {
+  max-width: 80%;
+  padding: 2em;
+  border-radius: 1em;
+  background-color: #fff;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-gap: 1em;
+  animation: opkomen 0.2s forwards;
+}
+
+@keyframes opkomen {
+  0%  {transform: scale(0);}
+  10% {transform: scale(0.1);}
+  20%  {transform: scale(0.2);}
+  30%  {transform: scale(0.3);}
+  40%  {transform: scale(0.4);}
+  50%  {transform: scale(0.5);}
+  60%  {transform: scale(0.6);}
+  70%  {transform: scale(0.7);}
+  80%  {transform: scale(0.8);}
+  90%  {transform: scale(0.9);}
+  100%  {transform: scale(1);}
+}
+.sluit-knop {
+  width: 1.5em;
+  justify-self: end;
+  font-size: 2em;
+  font-weight: 900;
+  transform: translateX(0.5em);
+  border: 0;
+}
+
+.sluit-knop:hover {
+  color: red;
+}
